@@ -17,8 +17,8 @@ public class JsonUtils {
             JSONObject name = sandwichJson.getJSONObject("name");
             JSONArray akaJson =  name.getJSONArray("alsoKnownAs");
             JSONArray ingredients =  sandwichJson.getJSONArray("ingredients");
-            List<String> akaList = new ArrayList<String>();
-            List<String> ingredientsList = akaList;
+            List<String> akaList = new ArrayList<>();
+            List<String> ingredientsList = new ArrayList<>();
 
             for(int i = 0; i < akaJson.length(); i++){
                 akaList.add(akaJson.getString(i));
